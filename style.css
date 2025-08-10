@@ -369,10 +369,13 @@ a, button {
 	color: #272529;
 	font-family: cursive;
 	text-decoration: none;
+	transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .cbox .det a:hover {
 	background: linear-gradient(to right, #FA4B37, #DF2771);
 	color: white;
+	transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
 }
 .cbox .det a:hover img{
 	filter: brightness(100);
