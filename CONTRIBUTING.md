@@ -11,4 +11,4 @@ We 💖 contributors! Whether you’re fixing a bug, adding a new feature, impro
 
 2. **Clone** your fork locally:
    ```bash
-   git clone https://github.com/<your-username>/SkillEd-Elearning-Platform.git
+   git clone https://github.com/Nagkomatla/SkillEd-Elearning-Platform.git
