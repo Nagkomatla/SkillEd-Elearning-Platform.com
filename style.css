@@ -343,7 +343,26 @@ a, button {
 	opacity: 1;
 	transform: translateX(0px);
 }
-
+@keyframes FadeInUp {
+	0%{
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	
+}
+.fade-in{
+	opacity: 0;
+	transform: translateY(20px);
+}
+.fade-in.visible{
+	opacity: 1;
+	transform: translateY(0px);
+	animation: FadeInUp 1s ease-in-out forwards;
+}
 /*POPULAR SUBJECTS*/
 .cbox {
 	position: relative;
