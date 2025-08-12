@@ -22,9 +22,27 @@
 				<li><a href="#algo"><img src="../images/courses/algo.png" class="icon">Algorithm</a></li>
 				<li><a href="#projects"><img src="../images/courses/projects.png" class="icon">Projects</a></li>
 			</ul>
+
 			<div class="search" id="search-switch">
 				<input type="search" placeholder="Search" class="srch"><button id="srchbtn"><img src="../images/icon/search.png"></button>
 			</div>
+			<button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+			  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+
+  // Load saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+  });
+</script>
 		</div>
 	</header>
 	
