@@ -19,6 +19,8 @@
 				$('nav').removeClass('black');
 			}
 		})
+
+		
 	</script>
 </head>
 
@@ -35,8 +37,30 @@
 				<li><a href="#services_section">Services</a></li>
 				<li><a href="#contactus_section">Contact</a></li>
 			</ul>
-			<div class="srch"><input type="text" class="search" placeholder="Search here..."><img
-					src="images/icon/search.png" alt="search" onclick=slide()></div>
+
+			<div class="srch">
+				<input type="text" class="search" placeholder="Search here...">
+				<img src="images/icon/search.png" alt="search" onclick=slide()>
+			</div>
+			  <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+			  <script>
+  const toggleBtn = document.getElementById('theme-toggle');
+
+  // Load saved theme
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+  });
+</script>
+
+
 			<a class="get-started" href="login.html">Get Started</a>
 			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
 		</nav>
