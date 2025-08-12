@@ -489,24 +489,70 @@ body.dark-mode .title {
 	transform: translateX(0px);
 }
 body.dark-mode .about-content .side-text {
+
   background: #1e293b; /* Dark background */
+
   color: #f3f4f6; /* Light text */
+
   box-shadow: 2px 0 100px rgba(0, 0, 0, 0.7);
+
 }
 
 body.dark-mode .about-content .side-text h2 {
+
   color: #facc15; /* Accent heading (yellow) */
+
 }
 
 body.dark-mode .about-content .side-text p {
+
   color: #e5e7eb; /* Soft light for paragraphs */
+
 }
 
 body.dark-mode .about-content .side-image img {
+
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); /* Slight glow */
+
 }
 
+@keyframes FadeInUp {
 
+  0% {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateY(0px);
+
+  }
+
+}
+
+.fade-in {
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+}
+
+.fade-in.visible {
+
+  opacity: 1;
+
+  transform: translateY(0px);
+
+  animation: FadeInUp 1s ease-in-out forwards;
+
+}
 /*POPULAR SUBJECTS*/
 .cbox {
 	position: relative;
