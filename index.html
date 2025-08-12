@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
 	<meta charset="utf-8">
@@ -11,19 +12,20 @@
 	<script type="text/javascript" src="script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script>
-		$(window).on('scroll', function(){
-  			if($(window).scrollTop()){
-  			  $('nav').addClass('black');
- 			 }else {
- 		   $('nav').removeClass('black');
- 		 }
+		$(window).on('scroll', function () {
+			if ($(window).scrollTop()) {
+				$('nav').addClass('black');
+			} else {
+				$('nav').removeClass('black');
+			}
 		})
 
 		
 	</script>
 </head>
+
 <body>
-<!-- Navigation Bar -->
+	<!-- Navigation Bar -->
 	<header id="header">
 		<nav>
 			<div class="logo"><img src="images/icon/logo.png" alt="logo"></div>
@@ -35,6 +37,7 @@
 				<li><a href="#services_section">Services</a></li>
 				<li><a href="#contactus_section">Contact</a></li>
 			</ul>
+
 			<div class="srch">
 				<input type="text" class="search" placeholder="Search here...">
 				<img src="images/icon/search.png" alt="search" onclick=slide()>
@@ -64,9 +67,13 @@
 		<div class="head-container fade-in">
 			<div class="quote fade-in">
 				<p>The beautiful thing about learning is that nobody can take it away from you</p>
-				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research!</h5>
+				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,
+					beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and
+					directed research!</h5>
 				<div class="play fade-in">
-					<a href="https://youtu.be/H-deFSyeXSM?si=uYv9_HAvUXNjwrBw" class="fade-in" target="_blank"><img src="images/icon/play.png" alt="play"></a><span><a href="https://youtu.be/H-deFSyeXSM?si=uYv9_HAvUXNjwrBw" target="_blank">Watch Now</a></span>
+					<a href="https://youtu.be/H-deFSyeXSM?si=uYv9_HAvUXNjwrBw" class="fade-in" target="_blank"><img
+							src="images/icon/play.png" alt="play"></a><span><a
+							href="https://youtu.be/H-deFSyeXSM?si=uYv9_HAvUXNjwrBw" target="_blank">Watch Now</a></span>
 				</div>
 			</div>
 			<div class="svg-image fade-in">
@@ -91,260 +98,388 @@
 	</header>
 
 
-<!-- Some Popular Subjects -->
+	<!-- Some Popular Subjects -->
 	<div class="title fade-in">
 		<span>Popular Subjects on SkillEd</span>
 	</div>
 	<br><br>
 	<div class="course fade-in">
-		<center><div class="cbox fade-in">
-		<div class="det fade-in"><a href="subjects/jee.html"><img src="images/courses/book.png">JEE Preparation</a></div>
-		<div class="det fade-in"><a href="subjects/gate.html"><img src="images/courses/d1.png">GATE Preparation</a></div>
-		<div class="det fade-in"><a href="subjects/jee.html#sample_papers"><img src="images/courses/paper.png">Sample Papers</a></div>
-		<div class="det fade-in"><a href="subjects/quiz.html"><img src="images/courses/d1.png">Daily Quiz</a></div>
-		</div></center>
+		<center>
+			<div class="cbox fade-in">
+				<div class="det fade-in"><a href="subjects/jee.html"><img src="images/courses/book.png">JEE
+						Preparation</a></div>
+				<div class="det fade-in"><a href="subjects/gate.html"><img src="images/courses/d1.png">GATE
+						Preparation</a></div>
+				<div class="det fade-in"><a href="subjects/jee.html#sample_papers"><img
+							src="images/courses/paper.png">Sample Papers</a></div>
+				<div class="det fade-in"><a href="subjects/quiz.html"><img src="images/courses/d1.png">Daily Quiz</a>
+				</div>
+			</div>
+		</center>
 		<div class="cbox fade-in">
-		<div class="det fade-in"><a href="subjects/computer_courses.html"><img src="images/courses/computer.png">Computer Courses</a></div>
-		<div class="det fade-in"><a href="subjects/computer_courses.html#data"><img src="images/courses/data.png">Data Structures</a></div>
-		<div class="det fade-in"><a href="subjects/computer_courses.html#algo"><img src="images/courses/algo.png">Algorithm</a></div>
-		<div class="det det-last fade-in"><a href="subjects/computer_courses.html#projects"><img src="images/courses/projects.png">Projects</a></div>
+			<div class="det fade-in"><a href="subjects/computer_courses.html"><img
+						src="images/courses/computer.png">Computer Courses</a></div>
+			<div class="det fade-in"><a href="subjects/computer_courses.html#data"><img
+						src="images/courses/data.png">Data Structures</a></div>
+			<div class="det fade-in"><a href="subjects/computer_courses.html#algo"><img
+						src="images/courses/algo.png">Algorithm</a></div>
+			<div class="det det-last fade-in"><a href="subjects/computer_courses.html#projects"><img
+						src="images/courses/projects.png">Projects</a></div>
 		</div>
 	</div>
 
-	
-<!-- ABOUT -->
+
+	<!-- ABOUT -->
 	<div class="diffSection fade-in" id="about_section">
-		<center><p style="font-size: 50px; padding: 100px">About</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px">About</p>
+		</center>
 		<div class="about-content fade-in">
-				<div class="side-image fade-in>
-					<img class="sideImage fade-in" src="images/extra/e3.jpg">
-				</div>
-				<div class="side-text fade-in">
-					<h2>What you think about us ?</h2>
-					<p>Welcome to Aikyam, a platform dedicated to bridging the education gap and empowering individuals to learn, grow, and succeed. Created by the Aikyam Project Team, our mission is to provide quality education and skill-building opportunities for those who lack access to traditional resources.
+			<div class="side-image fade-in>
+					<img class=" sideImage fade-in" src="images/extra/e3.jpg">
+			</div>
+			<div class="side-text fade-in">
+				<h2>What you think about us ?</h2>
+				<p>Welcome to Aikyam, a platform dedicated to bridging the education gap and empowering individuals to
+					learn, grow, and succeed. Created by the Aikyam Project Team, our mission is to provide quality
+					education and skill-building opportunities for those who lack access to traditional resources.
 
-						Our platform offers engaging games, videos, and resources designed to make learning fun and interactive. Using modern web technologies like HTML, CSS, and JavaScript, we ensure a seamless and enriching user experience.
-						
-						Join us on this journey to unlock potential and build a brighter future through education!</p>
-				</div>
+					Our platform offers engaging games, videos, and resources designed to make learning fun and
+					interactive. Using modern web technologies like HTML, CSS, and JavaScript, we ensure a seamless and
+					enriching user experience.
+
+					Join us on this journey to unlock potential and build a brighter future through education!</p>
+			</div>
 		</div>
 	</div>
 
 
-<!-- PORTFOLIO -->
+	<!-- PORTFOLIO -->
 	<div class="diffSection fade-in" id="portfolio_section">
-		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p>
+		</center>
 		<div class="content fade-in">
 			<p>
-				“Our project team is driven by continuous learning, adaptability, and growth. We believe true education means embracing change, exploring ideas, and transforming challenges into opportunities. Together, we shape the future with creativity, innovation, and purpose.”
+				“Our project team is driven by continuous learning, adaptability, and growth. We believe true education
+				means embracing change, exploring ideas, and transforming challenges into opportunities. Together, we
+				shape the future with creativity, innovation, and purpose.”
 			</p>
 		</div>
 	</div>
 	<div class="extra fade-in">
 		<p>We're increasing this data every year</p>
 		<div class="smbox fade-in">
-		<span><center><div class="data fade-in">154</div><div class="det">Active Learners</div></center></span>
-		<span><center><div class="data fade-in">62</div><div class="det">Total Courses</div></center></span>
-		<span><center><div class="data fade-in">56</div><div class="det">Milestones Achieved</div></center></span>
-		<span><center><div class="data fade-in">27</div><div class="det">Total Projects</div></center></span>
+			<span>
+				<center>
+					<div class="data fade-in">154</div>
+					<div class="det">Active Learners</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data fade-in">62</div>
+					<div class="det">Total Courses</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data fade-in">56</div>
+					<div class="det">Milestones Achieved</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data fade-in">27</div>
+					<div class="det">Total Projects</div>
+				</center>
+			</span>
 		</div>
 	</div>
 
 
-<!-- TEAM -->
+	<!-- TEAM -->
 	<div class="diffSection fade-in" id="team_section">
-		<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p></center>
+		<center>
+			<p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p>
+		</center>
 		<div class="totalcard fade-in">
 			<div class="card fade-in">
 				<center><img src="images/creator/pooja.jpg"></center>
-				<center><div class="card-title fade-in">Ch.V.Pooja</div>
-				<div id="detail">
-					<p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives “</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-Pooja">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">Ch.V.Pooja</div>
+					<div id="detail">
+						<p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+							curiosity, he will continue the learning process as long as he lives “</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-Pooja">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 			<div class="card fade-in">
 				<center><img src="images/creator/nag.jpg"></center>
-				<center><div class="card-title fade-in">K.Naga Lakshmi</div>
-				<div id="detail">
-					<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-Pooja">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">K.Naga Lakshmi</div>
+					<div id="detail">
+						<p>“ Real education should consist of drawing the goodness and the best out of our own students.
+							What better books can there be than the book of humanity “</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-Pooja">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 			<div class="card fade-in">
 				<center><img src="images/creator/hema.jpg"></center>
-				<center><div class="card-title fade-in">A.Hema Priya</div>
-				<div id="detail">
-					<p>“The goal of true education is to replace an empty mind with an open one, capable of embracing the infinite possibilities of the world.“</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-Pooja">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">A.Hema Priya</div>
+					<div id="detail">
+						<p>“The goal of true education is to replace an empty mind with an open one, capable of
+							embracing the infinite possibilities of the world.“</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-Pooja">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 			<div class="card fade-in">
 				<center><img src="images/creator/rezwana.jpg"></center>
-				<center><div class="card-title fade-in">Sk.Rezwana</div>
-				<div id="detail">
-					<p>“The essence of education lies in teaching not just facts, but fostering the wisdom to question, explore, and innovate for a better tomorrow. “</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-akhil">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">Sk.Rezwana</div>
+					<div id="detail">
+						<p>“The essence of education lies in teaching not just facts, but fostering the wisdom to
+							question, explore, and innovate for a better tomorrow. “</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-akhil">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 		</div>
 		<div class="totalcard fade-in">
 			<div class="card fade-in">
 				<center><img src="images/creator/thanu.jpg"></center>
-				<center><div class="card-title fade-in">M.Thanu Sri</div>
-				<div id="detail">
-					<p>“Real education equips a person not just to make a living, but to make a meaningful life that contributes to the well-being of others. “</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/thanusri-muvva-629a65337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank"><button class="btn-Pooja">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">M.Thanu Sri</div>
+					<div id="detail">
+						<p>“Real education equips a person not just to make a living, but to make a meaningful life that
+							contributes to the well-being of others. “</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/thanusri-muvva-629a65337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+							target="_blank"><button class="btn1 btn-Pooja">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 			<div class="card fade-in">
 				<center><img src="images/creator/Bhavya.jpg"></center>
-				<center><div class="card-title fade-in">B.Bhavya Sri</div>
-				<div id="detail">
-					<p>“ Learning is not attained by chance; it must be sought with ardor and cultivated with diligence, like a seed nurtured into a mighty tree.“</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-Pooja">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">B.Bhavya Sri</div>
+					<div id="detail">
+						<p>“ Learning is not attained by chance; it must be sought with ardor and cultivated with
+							diligence, like a seed nurtured into a mighty tree.“</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-Pooja">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 			<div class="card fade-in">
 				<center><img src="images/creator/Dhanya.jpg"></center>
-				<center><div class="card-title fade-in">B.Dhany Sri</div>
-				<div id="detail">
-					<p>“ Great teachers inspire their students to discover the power within themselves, for education is the journey of turning potential into purpose. “</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-Pooja">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">B.Dhany Sri</div>
+					<div id="detail">
+						<p>“ Great teachers inspire their students to discover the power within themselves, for
+							education is the journey of turning potential into purpose. “</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-Pooja">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 			<div class="card fade-in">
 				<center><img src="images/creator/pujitha.jpg"></center>
-				<center><div class="card-title fade-in">G.Pujitha</div>
-				<div id="detail">
-					<p>“Education is not the filling of a pail, but the lighting of a fire; ignite curiosity, and the desire to learn will never extinguish.“</p>
-					<div class="duty fade-in"></div>
-					<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button class="btn-akhil">Follow +</button></a>
-				</div>
+				<center>
+					<div class="card-title fade-in">G.Pujitha</div>
+					<div id="detail">
+						<p>“Education is not the filling of a pail, but the lighting of a fire; ignite curiosity, and
+							the desire to learn will never extinguish.“</p>
+						<div class="duty fade-in"></div>
+						<a href="https://www.linkedin.com/in/nag-komatla-a95261246/" target="_blank"><button
+								class="btn1 btn-akhil">Follow +</button></a>
+					</div>
 				</center>
 			</div>
 		</div>
 	</div>
 
 
-<!-- SERVICES -->
+	<!-- SERVICES -->
 	<div class="service-swipe fade-in">
 		<div class="diffSection fade-in" id="services_section">
-		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+			<center>
+				<p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p>
+			</center>
 		</div>
-		<a href="subjects/computer_courses.html"><div class="s-card fade-in"><img src="images/icon/computer-courses.png"><p>Free Online Computer Courses</p></div></a>
-		<a href="subjects/jee.html"><div class="s-card fade-in"><img src="images/icon/brainbooster.png"><p>Building Concepts for Competitive Exams</p></div></a>
-		<a href="#"><div class="s-card fade-in"><img src="images/icon/online-tutorials.png"><p>Online Video Lectures</p></div></a>
-		<a href="subjects/jee.html#sample_papers"><div class="s-card fade-in"><img src="images/icon/papers.jpg"><p>Sample Papers of Various Competitive Exams</p></div></a>
-		<a href="#"><div class="s-card fade-in"><img src="images/icon/p3.png"><p>Performance and Ranking Report</p></div></a>
-		<a href="#contactus_section"><div class="s-card fade-in"><img src="images/icon/discussion.png"><p>Discussion with Our Tutors & Mentors</p></div></a>
-		<a href="subjects/quiz.html"><div class="s-card fade-in"><img src="images/icon/q1.png"><p>Daily Brain Teasing Questions to Improve IQ</p></div></a>
-		<a href="#contactus_section"><div class="s-card fade-in"><img src="images/icon/help.png"><p>24x7 Online Support</p></div></a>
+		<a href="subjects/computer_courses.html">
+			<div class="s-card fade-in"><img src="images/icon/computer-courses.png">
+				<p>Free Online Computer Courses</p>
+			</div>
+		</a>
+		<a href="subjects/jee.html">
+			<div class="s-card fade-in"><img src="images/icon/brainbooster.png">
+				<p>Building Concepts for Competitive Exams</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="s-card fade-in"><img src="images/icon/online-tutorials.png">
+				<p>Online Video Lectures</p>
+			</div>
+		</a>
+		<a href="subjects/jee.html#sample_papers">
+			<div class="s-card fade-in"><img src="images/icon/papers.jpg">
+				<p>Sample Papers of Various Competitive Exams</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="s-card fade-in"><img src="images/icon/p3.png">
+				<p>Performance and Ranking Report</p>
+			</div>
+		</a>
+		<a href="#contactus_section">
+			<div class="s-card fade-in"><img src="images/icon/discussion.png">
+				<p>Discussion with Our Tutors & Mentors</p>
+			</div>
+		</a>
+		<a href="subjects/quiz.html">
+			<div class="s-card fade-in"><img src="images/icon/q1.png">
+				<p>Daily Brain Teasing Questions to Improve IQ</p>
+			</div>
+		</a>
+		<a href="#contactus_section">
+			<div class="s-card fade-in"><img src="images/icon/help.png">
+				<p>24x7 Online Support</p>
+			</div>
+		</a>
 	</div>
 
-<!-- Reviews by Students -->
-<div id="makeitfull">
-	<a href="#review_section"><img src="images/icon/makeitfull.png"></a>
-</div>
-<div class="review fade-in">
-	<div class="diffSection fade-in" id="review_section">
-		<center><p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What the Students Say About Us?</p></center>
+	<!-- Reviews by Students -->
+	<div id="makeitfull">
+		<a href="#review_section"><img src="images/icon/makeitfull.png"></a>
 	</div>
-	<div class="rev-container fade-in">
-		<div class="rev-card fade-in">
-			<div class="identity fade-in">
-				<img src="images/creator/humanNotExist1.jpg"><p>Sri</p>
-				<h6>Java</h6>
-				<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
-			</div>
-			<div class="rev-cont fade-in">
-				<p id="title">Review:</p>
-				<p id="content">
-					I did Java Fundamenetal course with Nagalaxmi Mam. It was a great experience. The brain teasers and assignments, actually the whole lot of content was really good. Some problems were challenging yet interesting. Was explained very well where ever I stuck...
-				</p>
-			</div>
+	<div class="review fade-in">
+		<div class="diffSection fade-in" id="review_section">
+			<center>
+				<p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What the Students Say
+					About Us?</p>
+			</center>
 		</div>
-		<div class="rev-card fade-in">
-			<div class="identity fade-in">
-				<img src="images/creator/humanNotExist2.jpg"><p>Satya Chowdary</p>
-				<h6>C/C++</h6>
-				<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+		<div class="rev-container fade-in">
+			<div class="rev-card fade-in">
+				<div class="identity fade-in">
+					<img src="images/creator/humanNotExist1.jpg">
+					<p>Sri</p>
+					<h6>Java</h6>
+					<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont fade-in">
+					<p id="title">Review:</p>
+					<p id="content">
+						I did Java Fundamenetal course with Nagalaxmi Mam. It was a great experience. The brain teasers
+						and assignments, actually the whole lot of content was really good. Some problems were
+						challenging yet interesting. Was explained very well where ever I stuck...
+					</p>
+				</div>
 			</div>
-			<div class="rev-cont fade-in">
-				<p id="title">Review:</p>
-				<p id="content">
-					When I was watching "Dear Zindagi", I could relate Sharukh Khan to Pooja Mam. The way Sharukh Khan was giving life lessons to Alia Bhatt, in the same way Pooja Mam will give coding life lessons which will guide you throughout your code life...
-				</p>
+			<div class="rev-card fade-in">
+				<div class="identity fade-in">
+					<img src="images/creator/humanNotExist2.jpg">
+					<p>Satya Chowdary</p>
+					<h6>C/C++</h6>
+					<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont fade-in">
+					<p id="title">Review:</p>
+					<p id="content">
+						When I was watching "Dear Zindagi", I could relate Sharukh Khan to Pooja Mam. The way Sharukh
+						Khan was giving life lessons to Alia Bhatt, in the same way Pooja Mam will give coding life
+						lessons which will guide you throughout your code life...
+					</p>
+				</div>
 			</div>
-		</div>
-		<div class="rev-card fade-in">
-			<div class="identity fade-in">
-				<img src="images/creator/humanNotExist3.jpg"><p>Devyn Sethi</p>
-				<h6>JEE</h6>
-				<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+			<div class="rev-card fade-in">
+				<div class="identity fade-in">
+					<img src="images/creator/humanNotExist3.jpg">
+					<p>Devyn Sethi</p>
+					<h6>JEE</h6>
+					<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont fade-in">
+					<p id="title">Review:</p>
+					<p id="content">
+						SkillEd was an amazing experience for me. I belong to electronics department and had a little
+						experience in coding but I think it has helped me think things through in a much more analytical
+						manner. It gives you a better understanding about how to approach a problem...
+					</p>
+				</div>
 			</div>
-			<div class="rev-cont fade-in">
-				<p id="title">Review:</p>
-				<p id="content">
-					SkillEd was an amazing experience for me. I belong to electronics department and had a little experience in coding but I think it has helped me think things through in a much more analytical manner. It gives you a better understanding about how to approach a problem...
-				</p>
-			</div>
-		</div>
-		<div class="rev-card fade-in">
-			<div class="identity fade-in">
-				<img src="images/creator/humanNotExist4.jpg"><p>Bhavya</p>
-				<h6>Python</h6>
-				<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
-			</div>
-			<div class="rev-cont fade-in">
-				<p id="title">Review:</p>
-				<p id="content">
-					This was my first complete course at coding blocks. I attended the Python course in Winter 2024 and loved it which made me join the full course. Nagalaxmi and Pooja have good knowledge about the field and were very helpful in making us understand the concepts. I would certainly recommend this to anyone...
-				</p>
+			<div class="rev-card fade-in">
+				<div class="identity fade-in">
+					<img src="images/creator/humanNotExist4.jpg">
+					<p>Bhavya</p>
+					<h6>Python</h6>
+					<div class="rating fade-in"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont fade-in">
+					<p id="title">Review:</p>
+					<p id="content">
+						This was my first complete course at coding blocks. I attended the Python course in Winter 2024
+						and loved it which made me join the full course. Nagalaxmi and Pooja have good knowledge about
+						the field and were very helpful in making us understand the concepts. I would certainly
+						recommend this to anyone...
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- CONTACT US -->
+	<!-- CONTACT US -->
 	<div class="diffSection fade-in" id="contactus_section">
-		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px">Contact Us</p>
+		</center>
 		<div class="csec fade-in"></div>
 		<div class="back-contact fade-in">
 			<div class="cc fade-in">
-			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
-				<label>First Name <span class="imp fade-in">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
-				<center>
-				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
-				</center>
-				<label>Email <span class="imp fade-in">*</span></label><br>
-				<input type="email" name="mail" style="width: 100%" required="required"><br>
-				<label>Message <span class="imp fade-in">*</span></label><br>
-				<input type="text" name="message" style="width: 100%" required="required"><br>
-				<label>Additional Details</label><br>
-				<textarea name="addtional"></textarea><br>
-				<button type="submit" id="csubmit">Send Message</button>
-			</form>
+				<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+					<label>First Name <span class="imp fade-in">*</span></label><label style="margin-left: 185px">Last
+						Name <span class="imp">*</span></label><br>
+					<center>
+						<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input
+							type="text" name="lname" style="width: 175px" required="required"><br>
+					</center>
+					<label>Email <span class="imp fade-in">*</span></label><br>
+					<input type="email" name="mail" style="width: 100%" required="required"><br>
+					<label>Message <span class="imp fade-in">*</span></label><br>
+					<input type="text" name="message" style="width: 100%" required="required"><br>
+					<label>Additional Details</label><br>
+					<textarea name="addtional"></textarea><br>
+					<button type="submit" id="csubmit">Send Message</button>
+				</form>
 			</div>
 		</div>
 	</div>
 
 
-<!-- FEEDBACK -->
+	<!-- FEEDBACK -->
 	<div class="title2 fade-in" id="feedBACK">
 		<span>Give Feedback</span>
 		<div class="shortdesc2 fade-in">
@@ -366,37 +501,128 @@
 		</div>
 	</div>
 
-<!-- Sliding Information -->
-	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+	<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left"
+		onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+		<div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it
+			today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is
+			expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and
+			change.”</div>
+	</marquee>
 
-<!-- FOOTER -->
+	<!-- FOOTER -->
 	<footer>
 		<div class="footer-container fade-in">
 			<div class="left-col">
 				<img src="images/icon/logo - Copy.png" style="width: 200px;">
-				<div class="logo"></div>
-				<div class="social-media">
-					<a href="#"><img src="images/icon\fb.png"></a>
-					<a href="#"><img src="images/icon\insta.png"></a>
-					<a href="#"><img src="images/icon\tt.png"></a>
-					<a href="#"><img src="images/icon\ytube.png"></a>
-					<a href="#"><img src="images/icon\linkedin.png"></a>
-				</div><br><br>
-				<p class="rights-text">Copyright © 2025 Created By Naga Lakshmi, Pooja All Rights Reserved.</p>
-				<br><p><img src="images/icon/location.png"> Bapatla Women's Engineering College<br>Bapatla, Andhra Pradesh-522101</p><br>
-				<p><img src="images/icon/phone.png"> +91-6301905086<br><img src="images/icon/mail.png">&nbsp; learnedonline@gmail.com</p>
+				<div class="social-links">
+					<!-- LinkedIn -->
+
+					<a href="https://www.linkedin.com/in/nag-komatla-a95261246" target="_blank"
+						rel="noopener noreferrer" aria-label="LinkedIn Nag Komatla" style="margin:0 10px;">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+							fill="#0A66C2" role="img" aria-hidden="true">
+							<g>
+								<path
+									d="M23.002,21.584h0.227l-0.435-0.658l0,0c0.266,0,0.407-0.169,0.409-0.376c0-0.008,0-0.017-0.001-0.025c0-0.282-0.17-0.417-0.519-0.417h-0.564v1.476h0.212v-0.643h0.261L23.002,21.584z M22.577,20.774h-0.246v-0.499h0.312c0.161,0,0.345,0.026,0.345,0.237c0,0.242-0.186,0.262-0.412,0.262" />
+								<path
+									d="M17.291,19.073h-3.007v-4.709c0-1.123-0.02-2.568-1.564-2.568c-1.566,0-1.806,1.223-1.806,2.487v4.79H7.908V9.389h2.887v1.323h0.04c0.589-1.006,1.683-1.607,2.848-1.564c3.048,0,3.609,2.005,3.609,4.612L17.291,19.073z M4.515,8.065c-0.964,0-1.745-0.781-1.745-1.745c0-0.964,0.781-1.745,1.745-1.745c0.964,0,1.745,0.781,1.745,1.745C6.26,7.284,5.479,8.065,4.515,8.065 M6.018,19.073h-3.01V9.389h3.01V19.073z M18.79,1.783H1.497C0.68,1.774,0.01,2.429,0,3.246V20.61c0.01,0.818,0.68,1.473,1.497,1.464H18.79c0.819,0.01,1.492-0.645,1.503-1.464V3.245c-0.012-0.819-0.685-1.474-1.503-1.463" />
+								<path
+									d="M22.603,19.451c-0.764,0.007-1.378,0.633-1.37,1.397c0.007,0.764,0.633,1.378,1.397,1.37c0.764-0.007,1.378-0.633,1.37-1.397c-0.007-0.754-0.617-1.363-1.37-1.37H22.603 M22.635,22.059c-0.67,0.011-1.254-0.522-1.265-1.192c-0.011-0.67,0.523-1.222,1.193-1.233c0.67-0.011,1.222,0.523,1.233,1.193c0,0.007,0,0.013,0,0.02C23.81,21.502,23.29,22.045,22.635,22.059h-0.031" />
+							</g>
+						</svg>
+					</a>
+
+					<!-- Instagram -->
+					<a href="https://instagram.com/nagkomatla" target="_blank" rel="noopener noreferrer"
+						aria-label="Instagram nagkomatla" style="margin:0 10px;">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+							fill="#E4405F" role="img" aria-hidden="true">
+							<g>
+								<path
+									d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942C15.668,0.014,15.259,0,12,0z" />
+								<path
+									d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
+								<circle cx="18.406" cy="5.594" r="1.44" />
+							</g>
+						</svg>
+					</a>
+
+					<!-- Email -->
+					<a href="mailto:nagkomatla@gmail.com" aria-label="Send email to nagkomatla@gmail.com"
+						style="margin:0 10px;">
+						<svg height="24" width="24" viewBox="0 0 512 512" fill="#000000" role="img" aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg">
+							<path d="M510.746,110.361c-2.128-10.754-6.926-20.918-13.926-29.463c-1.422-1.794-2.909-3.39-4.535-5.009
+      c-12.454-12.52-29.778-19.701-47.531-19.701H67.244c-17.951,0-34.834,7-47.539,19.708c-1.608,1.604-3.099,3.216-4.575,5.067
+      c-6.97,8.509-11.747,18.659-13.824,29.428C0.438,114.62,0,119.002,0,123.435v265.137c0,9.224,1.874,18.206,5.589,26.745
+      c3.215,7.583,8.093,14.772,14.112,20.788c1.516,1.509,3.022,2.901,4.63,4.258c12.034,9.966,27.272,15.45,42.913,15.45h377.51
+      c15.742,0,30.965-5.505,42.967-15.56c1.604-1.298,3.091-2.661,4.578-4.148c5.818-5.812,10.442-12.49,13.766-19.854l0.438-1.05
+      c3.646-8.377,5.497-17.33,5.497-26.628V123.435C512,119.06,511.578,114.649,510.746,110.361z M34.823,99.104
+      c0.951-1.392,2.165-2.821,3.714-4.382c7.689-7.685,17.886-11.914,28.706-11.914h377.51c10.915,0,21.115,4.236,28.719,11.929
+      c1.313,1.327,2.567,2.8,3.661,4.272l2.887,3.88l-201.5,175.616c-6.212,5.446-14.21,8.443-22.523,8.443
+      c-8.231,0-16.222-2.99-22.508-8.436L32.19,102.939L34.823,99.104z M26.755,390.913c-0.109-0.722-0.134-1.524-0.134-2.341V128.925
+      l156.37,136.411L28.199,400.297L26.755,390.913z M464.899,423.84c-6.052,3.492-13.022,5.344-20.145,5.344H67.244
+      c-7.127,0-14.094-1.852-20.142-5.344l-6.328-3.668l159.936-139.379l17.528,15.246c10.514,9.128,23.922,14.16,37.761,14.16
+      c13.89,0,27.32-5.032,37.827-14.16l17.521-15.253L471.228,420.18L464.899,423.84z M485.372,388.572
+      c0,0.803-0.015,1.597-0.116,2.304l-1.386,9.472L329.012,265.409l156.36-136.418V388.572z" />
+						</svg>
+					</a>
+
+					<!-- Twitter -->
+					<a href="https://twitter.com/naga91821" target="_blank" rel="noopener noreferrer"
+						aria-label="Twitter @naga91821" style="margin:0 10px;">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+							fill="#1DA1F2" role="img" aria-hidden="true">
+							<path
+								d="M21.543,7.104c0.014,0.211,0.014,0.423,0.014,0.636  c0,6.507-4.954,14.01-14.01,14.01v-0.004C4.872,21.75,2.252,20.984,0,19.539c0.389,0.047,0.78,0.07,1.172,0.071  c2.218,0.002,4.372-0.742,6.115-2.112c-2.107-0.04-3.955-1.414-4.6-3.42c0.738,0.142,1.498,0.113,2.223-0.084  c-2.298-0.464-3.95-2.483-3.95-4.827c0-0.021,0-0.042,0-0.062c0.685,0.382,1.451,0.593,2.235,0.616  C1.031,8.276,0.363,5.398,1.67,3.148c2.5,3.076,6.189,4.946,10.148,5.145c-0.397-1.71,0.146-3.502,1.424-4.705  c1.983-1.865,5.102-1.769,6.967,0.214c1.103-0.217,2.16-0.622,3.127-1.195c-0.368,1.14-1.137,2.108-2.165,2.724  C22.148,5.214,23.101,4.953,24,4.555C23.339,5.544,22.507,6.407,21.543,7.104z" />
+						</svg>
+					</a>
+
+					<!-- GitHub -->
+					<a href="https://github.com/Nagkomatla" target="_blank" rel="noopener noreferrer"
+						aria-label="GitHub Nagkomatla" style="margin:0 10px;">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#black"
+							role="img" aria-hidden="true">
+							<path style="fill-rule:evenodd;clip-rule:evenodd;"
+								d="M12,0.296c-6.627,0-12,5.372-12,12c0,5.302,3.438,9.8,8.206,11.387   c0.6,0.111,0.82-0.26,0.82-0.577c0-0.286-0.011-1.231-0.016-2.234c-3.338,0.726-4.043-1.416-4.043-1.416   C4.421,18.069,3.635,17.7,3.635,17.7c-1.089-0.745,0.082-0.729,0.082-0.729c1.205,0.085,1.839,1.237,1.839,1.237   c1.07,1.834,2.807,1.304,3.492,0.997C9.156,18.429,9.467,17.9,9.81,17.6c-2.665-0.303-5.467-1.332-5.467-5.93   c0-1.31,0.469-2.381,1.237-3.221C5.455,8.146,5.044,6.926,5.696,5.273c0,0,1.008-0.322,3.301,1.23   C9.954,6.237,10.98,6.104,12,6.099c1.02,0.005,2.047,0.138,3.006,0.404c2.29-1.553,3.297-1.23,3.297-1.23   c0.653,1.653,0.242,2.873,0.118,3.176c0.769,0.84,1.235,1.911,1.235,3.221c0,4.609-2.807,5.624-5.479,5.921   c0.43,0.372,0.814,1.103,0.814,2.222c0,1.606-0.014,2.898-0.014,3.293c0,0.319,0.216,0.694,0.824,0.576   c4.766-1.589,8.2-6.085,8.2-11.385C24,5.669,18.627,0.296,12,0.296z" />
+							<path
+								d="M4.545,17.526c-0.026,0.06-0.12,0.078-0.206,0.037c-0.087-0.039-0.136-0.121-0.108-0.18   c0.026-0.061,0.12-0.078,0.207-0.037C4.525,17.384,4.575,17.466,4.545,17.526L4.545,17.526z" />
+							<path
+								d="M5.031,18.068c-0.057,0.053-0.169,0.028-0.245-0.055c-0.079-0.084-0.093-0.196-0.035-0.249   c0.059-0.053,0.167-0.028,0.246,0.056C5.076,17.903,5.091,18.014,5.031,18.068L5.031,18.068z" />
+							<path
+								d="M5.504,18.759c-0.074,0.051-0.194,0.003-0.268-0.103c-0.074-0.107-0.074-0.235,0.002-0.286   c0.074-0.051,0.193-0.005,0.268,0.101C5.579,18.579,5.579,18.707,5.504,18.759L5.504,18.759z" />
+							<path
+								d="M6.152,19.427c-0.066,0.073-0.206,0.053-0.308-0.046c-0.105-0.097-0.134-0.234-0.068-0.307   c0.067-0.073,0.208-0.052,0.311,0.046C6.191,19.217,6.222,19.355,6.152,19.427L6.152,19.427z" />
+							<path
+								d="M7.047,19.814c-0.029,0.094-0.164,0.137-0.3,0.097C6.611,19.87,6.522,19.76,6.55,19.665   c0.028-0.095,0.164-0.139,0.301-0.096C6.986,19.609,7.075,19.719,7.047,19.814L7.047,19.814z" />
+							<path
+								d="M8.029,19.886c0.003,0.099-0.112,0.181-0.255,0.183c-0.143,0.003-0.26-0.077-0.261-0.174c0-0.1,0.113-0.181,0.256-0.184   C7.912,19.708,8.029,19.788,8.029,19.886L8.029,19.886z" />
+							<path
+								d="M8.943,19.731c0.017,0.096-0.082,0.196-0.224,0.222c-0.139,0.026-0.268-0.034-0.286-0.13   c-0.017-0.099,0.084-0.198,0.223-0.224C8.797,19.574,8.925,19.632,8.943,19.731L8.943,19.731z" />
+						</svg>
+					</a>
+
+
+					<p class="rights-text">Copyright © 2025 Created By Naga Lakshmi, Pooja All Rights Reserved.</p>
+					<br>
+					<p><img src="images/icon/location.png"> Bapatla Women's Engineering College<br>Bapatla, Andhra
+						Pradesh-522101</p><br>
+					<p><img src="images/icon/phone.png"> +91-6301905086<br><img src="images/icon/mail.png">&nbsp;
+						learnedonline@gmail.com</p>
+				</div>
+				<div class="right-col">
+					<h1 style="color: #fff">Our Newsletter</h1>
+					<div class="border"></div><br>
+					<p>Enter Your Email to get our News and updates.</p>
+					<form class="newsletter-form">
+						<input class="txtb" type="email" placeholder="Enter Your Email">
+						<input class="btn" type="submit" value="Submit">
+					</form>
+				</div>
 			</div>
-			<div class="right-col">
-				<h1 style="color: #fff">Our Newsletter</h1>
-				<div class="border"></div><br>
-				<p>Enter Your Email to get our News and updates.</p>
-				<form class="newsletter-form">
-					<input class="txtb" type="email" placeholder="Enter Your Email">
-					<input class="btn" type="submit" value="Submit">
-				</form>
-			</div>
-		</div>
 	</footer>
 
 </body>
+
 </html>

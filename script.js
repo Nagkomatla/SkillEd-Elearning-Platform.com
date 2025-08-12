@@ -183,3 +183,4 @@ function sideMenu(side) {
 
       faders.forEach(fade => observer.observe(fade));
     });
+  
