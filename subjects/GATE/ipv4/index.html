@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Playlist Thumbnails</title>
+  <style>
+    /* ===== Base Styles ===== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      color: #333;
+    }
+
+    /* ===== Headings ===== */
+    h2 {
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-size: 2rem;
+      color: #FA4B37;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin: 0.5rem auto 0;
+      background: #FA4B37;
+      border-radius: 2px;
+    }
+
+    /* ===== Playlist Containers ===== */
+    .playlist {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    /* ===== Video Grid ===== */
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .video {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
+
+    .video img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Play Button Overlay */
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      pointer-events: none;
+    }
+
+    /* ===== See More Link ===== */
+    .see-more {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: #FA4B37;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .see-more:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Centering the see more link */
+    .see-more-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Playlist 1 -->
+   <div class="playlist">
+    <h2>Ipv4/Ipv6</h2>
+ <div class="videos">
+    <a class="video" href="https://www.youtube.com/watch?v=phOlq9SuscM" target="_blank">
+      <img src="https://img.youtube.com/vi/phOlq9SuscM/hqdefault.jpg" alt="Video 1">
+      <div class="play-button">▶</div>
+    </a>
+    <a class="video" href="https://www.youtube.com/watch?v=m_iCPlVzN_o" target="_blank">
+      <img src="https://img.youtube.com/vi/m_iCPlVzN_o/hqdefault.jpg" alt="Video 2">
+      <div class="play-button">▶</div>
+    </a>
+    <a class="video" href="https://www.youtube.com/watch?v=VkgfyLf1raY" target="_blank">
+      <img src="https://img.youtube.com/vi/VkgfyLf1raY/hqdefault.jpg" alt="Video 3">
+      <div class="play-button">▶</div>
+    </a>
+    <a class="video" href="https://www.youtube.com/watch?v=0MJmtjj0qCQ" target="_blank">
+      <img src="https://img.youtube.com/vi/0MJmtjj0qCQ/hqdefault.jpg" alt="Video 4">
+      <div class="play-button">▶</div>
+    </a>
+  </div>
+  <div class="see-more-container">
+    <a class="see-more" href="https://youtube.com/playlist?list=PLBlnK6fEyqRi7E6_6rLC5N_v50TW6qlrf&si=ETw3fDmLSEF_Q1Fe" target="_blank">See More on YouTube</a>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
