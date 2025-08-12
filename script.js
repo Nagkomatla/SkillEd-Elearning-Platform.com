@@ -183,3 +183,21 @@ function sideMenu(side) {
 
       faders.forEach(fade => observer.observe(fade));
     });
+
+const toTopBtn = document.getElementById("toTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) { // lowered for testing
+    toTopBtn.style.display = "block";
+  } else {
+    toTopBtn.style.display = "none";
+  }
+});
+
+toTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
