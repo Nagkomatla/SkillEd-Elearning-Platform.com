@@ -1346,3 +1346,26 @@ body.dark-mode footer input::placeholder {
 		width: 100%;
 	}
 }
+
+/* Navigate to Top Button Styles */
+#toTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toTopBtn:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
