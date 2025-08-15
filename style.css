@@ -1260,6 +1260,15 @@ footer .btn {
 footer .btn:hover {
 	opacity: .7;
 }
+.social-media a img {
+    width: 22px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.15);
+    filter: brightness(0) saturate(100%) invert(49%) sepia(96%) saturate(747%) hue-rotate(340deg) brightness(98%) contrast(101%);
+}
 /* Dark mode for footer */
 body.dark-mode footer {
   background: #111827;
