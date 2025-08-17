@@ -240,3 +240,29 @@ toTopBtn.addEventListener("click", () => {
   });
 
   observer.observe(document.querySelector(".extra"));
+// --- Search Bar Functionality ---
+
+// 1. Select the search input and all the popular subject boxes
+const searchInput = document.querySelector('.srch .search');
+const courseCards = document.querySelectorAll('.course .cbox .det');
+
+// 2. Add an event listener that runs whenever the user types
+searchInput.addEventListener('keyup', function() {
+  // 3. Get the search term and convert it to lower case
+  const searchTerm = searchInput.value.toLowerCase();
+
+  // 4. Loop through all the subject cards
+  courseCards.forEach(card => {
+    // 5. Get the text content of the subject link
+    const courseTitle = card.textContent.toLowerCase();
+
+    // 6. Check if the course title includes the search term
+    if (courseTitle.includes(searchTerm)) {
+      // If it matches, make sure the card is visible
+      card.style.display = 'block';
+    } else {
+      // If it doesn't match, hide the card
+      card.style.display = 'none';
+    }
+  });
+});
