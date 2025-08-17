@@ -200,4 +200,43 @@ toTopBtn.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+  function animateCounters() {
+    const counters = document.querySelectorAll(".data");
 
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const duration = 2000; // animation duration in ms
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        // Easing: easeOutCubic
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+        count = Math.floor(target * easedProgress);
+        counter.innerText = count;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target; // Ensure exact target at the end
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    });
+  }
+
+  // Trigger animation when in viewport
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        observer.disconnect(); // Run only once
+      }
+    });
+  });
+
+  observer.observe(document.querySelector(".extra"));
