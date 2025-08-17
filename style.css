@@ -1180,8 +1180,8 @@ body.dark-mode .feed #csubmit {
 }
 /* Dark mode for marquee text */
 body.dark-mode .marqu {
-  color: #f3f4f6;
-  background-color: rgba(31, 41, 55, 0.8);
+    color: rgb(243, 244, 246);
+    background-color: transparent; /* This is the fix */
 }
 
 
@@ -1377,4 +1377,10 @@ body.dark-mode footer input::placeholder {
 #toTopBtn:hover {
   background-color: #555;
   transform: scale(1.1);
+}
+/* Fix for marquee banner layering and spacing issue */
+marquee {
+	position: relative;
+	z-index: 999;
+	padding-top: 50px; 
 }
