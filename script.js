@@ -240,3 +240,26 @@ toTopBtn.addEventListener("click", () => {
   });
 
   observer.observe(document.querySelector(".extra"));
+  // --- Newsletter Form Feedback ---
+
+// 1. Select the form and the email input field
+const newsletterForm = document.querySelector('.newsletter-form');
+const emailInput = document.querySelector('.newsletter-form .txtb');
+
+// 2. Add an event listener for the 'submit' event
+newsletterForm.addEventListener('submit', function (event) {
+  // 3. Prevent the form from reloading the page
+  event.preventDefault();
+
+  // 4. Get the email value and check if it's not empty
+  const email = emailInput.value;
+  if (email.trim() === '') {
+    alert('Please enter your email address.');
+  } else {
+    // 5. If it's not empty, show a success message
+    alert('Thank you for subscribing!');
+    
+    // 6. Clear the input field
+    emailInput.value = '';
+  }
+});
