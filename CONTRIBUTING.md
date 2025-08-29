@@ -28,18 +28,19 @@ Whether it’s fixing bugs 🐛, adding new features ⚡, improving docs 📖, o
 1. **Fork** the repository 🍴  
    ```bash
    git fork https://github.com/Nagkomatla/SkillEd-Elearning-Platform.git
+   ```
 
 2. **Clone your fork**
 ```bash
 git clone https://github.com/<your-username>/SkillEd-Elearning-Platform.git
 cd SkillEd-Elearning-Platform
-
+```
 
 3. **Add upstream (creator’s repo)**
 ```bash
 git remote add upstream https://github.com/Nagkomatla/SkillEd-Elearning-Platform.git
 git remote -v   # verify origin and upstream
-
+```
 
 4. **Sync your fork before starting work**
 ```bash
@@ -47,24 +48,25 @@ git fetch upstream
 git checkout main
 git merge upstream/main
 git push origin main
+```
 
 
 5. **Create a new branch for your feature 🌱**
 ```bash
 git checkout -b feature-branch-name
-
+```
 
 6. **Make changes ✨**
 ```bash
 # edit files, then stage & commit
 git add .
 git commit -m "feat: add quiz timer functionality"
-
+```
 
 7. **Push changes 🚀**
 ```bash
 git push origin feature-branch-name
-
+```
 
 Open a Pull Request (PR) 🔥
 Head to your fork on GitHub → click Compare & pull request → submit PR to main branch of upstream.
