@@ -27,7 +27,7 @@
 		<nav>
 			<div class="logo"><img src="../assets/images/icon/logo.png" alt="logo"></div>
 			<ul>
-				<li><a class="active" href="">Home</a></li>
+				<li><a href="">Home</a></li>
 				<li><a href="#about_section">About</a></li>
 				<li><a href="#portfolio_section">Portfolio</a></li>
 				<li><a href="#team_section">Team </a></li>
@@ -421,6 +421,21 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+  const navLinks = document.querySelectorAll("nav ul li a");
+
+  // Make Home active by default
+  navLinks[0].classList.add("active");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      // Remove active class from all links
+      navLinks.forEach(l => l.classList.remove("active"));
+      // Add active class to the clicked link
+      this.classList.add("active");
+    });
+  });
+</script>
 
 	<script type="text/javascript" src="./script.js"></script>
 </body>
