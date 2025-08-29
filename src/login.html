@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="png" href="../assets/images/icon/favicon.png">
-	<title>Login SignUp</title>
+	<title>SkillEd - Login & Register</title>
 	<link rel="stylesheet" type="text/css" href="./css/loginStyle.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- It will redirect to the Home Page after submitting the form -->
@@ -16,50 +19,133 @@
   </script>
 </head>
 <body>
-		<div class="form-box">
-			<div class="button-box">
-				<div id="btn"></div>
-				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
-				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+	<div class="container">
+		<div class="form-container">
+			<!-- Logo Section -->
+			<div class="logo-section">
+				<img src="../assets/images/icon/logo.png" alt="SkillEd Logo" class="logo">
+				<h1>SkillEd</h1>
+				<p>Your learning journey starts here</p>
 			</div>
-			<div class="social-icons">
-				<img src="../assets/images/icon/fb2.png">
-				<img src="../assets/images/icon/insta2.png">
-				<img src="../assets/images/icon/tt2.png">
-			</div>
-			
-			<!-- Login Form -->
-			<form id="login" class="input-group" action="index.html">
-				<div class="inp">
-					<img src="../assets/images/icon/user.png"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
-				</div>
-				<div class="inp">
-					<img src="../assets/images/icon/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
-				</div>
-				<input type="checkbox" class="check-box">Remember Password
-				<button type="submit" class="submit-btn">Log In</button>
-			</form>
 
-
-			<div class="other" id="other">
-				<div class="instead">
-					<h3>or</h3>
+			<div class="form-box">
+				<div class="button-box">
+					<div id="btn"></div>
+					<button type="button" class="toggle-btn active" id="log" onclick="login()">
+						<i class="fas fa-sign-in-alt"></i> Log In
+					</button>
+					<button type="button" class="toggle-btn" id="reg" onclick="register()">
+						<i class="fas fa-user-plus"></i> Register
+					</button>
 				</div>
-				<button class="connect" onclick="google()">
-					<img src="../assets/images/icon/google.png"><span>Sign in with Google</span>
-				</button>
+				
+				<!-- Login Form -->
+				<form id="login" class="input-group" action="index.html">
+					<div class="input-container">
+						<div class="input-wrapper">
+							<i class="fas fa-user input-icon"></i>
+							<input type="text" id="email" class="input-field" placeholder="Username or Email" required>
+						</div>
+					</div>
+					<div class="input-container">
+						<div class="input-wrapper">
+							<i class="fas fa-lock input-icon"></i>
+							<input type="password" id="password" class="input-field" placeholder="Password" required>
+							<i class="fas fa-eye password-toggle" onclick="togglePassword('password')"></i>
+						</div>
+					</div>
+					
+					<div class="form-options">
+						<label class="checkbox-container">
+							<input type="checkbox" class="check-box">
+							<span class="checkmark"></span>
+							Remember me
+						</label>
+						<a href="#" class="forgot-password">Forgot Password?</a>
+					</div>
+					
+					<button type="submit" class="submit-btn">
+						<i class="fas fa-sign-in-alt"></i>
+						Log In
+					</button>
+
+					<div class="divider" id="divider">
+						<span>or continue with</span>
+					</div>
+					
+					<div class="social-login" id="social-login">
+						<button class="social-btn google-btn" onclick="google()">
+							<i class="fab fa-google"></i>
+							<span>Google</span>
+						</button>
+						<button class="social-btn facebook-btn">
+							<i class="fab fa-facebook-f"></i>
+							<span>Facebook</span>
+						</button>
+						<button class="social-btn github-btn">
+							<i class="fab fa-github"></i>
+							<span>GitHub</span>
+						</button>
+					</div>
+				</form>
+				
+				<!-- Registration Form -->
+				<form id="register" class="input-group">
+					<div class="input-container">
+						<div class="input-wrapper">
+							<i class="fas fa-user input-icon"></i>
+							<input type="text" class="input-field" placeholder="Full Name" required>
+						</div>
+					</div>
+					<div class="input-container">
+						<div class="input-wrapper">
+							<i class="fas fa-envelope input-icon"></i>
+							<input type="email" class="input-field" placeholder="Email Address" required>
+						</div>
+					</div>
+					<div class="input-container">
+						<div class="input-wrapper">
+							<i class="fas fa-lock input-icon"></i>
+							<input type="password" id="reg-password" class="input-field" placeholder="Create Password" required>
+							<i class="fas fa-eye password-toggle" onclick="togglePassword('reg-password')"></i>
+						</div>
+					</div>
+					<div class="input-container">
+						<div class="input-wrapper">
+							<i class="fas fa-lock input-icon"></i>
+							<input type="password" id="confirm-password" class="input-field" placeholder="Confirm Password" required>
+							<i class="fas fa-eye password-toggle" onclick="togglePassword('confirm-password')"></i>
+						</div>
+					</div>
+					
+					<div class="form-options">
+						<label class="checkbox-container">
+							<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()" required>
+							<span class="checkmark"></span>
+							I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+						</label>
+					</div>
+					
+					<button type="submit" id="btnSubmit" class="submit-btn reg-btn">
+						<i class="fas fa-user-plus"></i>
+						Create Account
+					</button>
+				</form>
 			</div>
-			
-			<!-- Registration Form -->
-			<form id="register" class="input-group">
-				<input type="text" class="input-field" placeholder="Full Name" required="required">
-				<input type="email" class="input-field" placeholder="Email Address" required="required">
-				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
-				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
-				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
-				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
-			</form>
 		</div>
-		<script type="text/javascript" src="./script.js"></script>
+		
+		<!-- Background Animation -->
+		<div class="bg-animation">
+			<div class="floating-shapes">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+				<div class="shape shape-3"></div>
+				<div class="shape shape-4"></div>
+				<div class="shape shape-5"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
