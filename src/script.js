@@ -48,33 +48,60 @@ var y = document.getElementById("register");
 var z = document.getElementById("btn");
 var a = document.getElementById("log");
 var b = document.getElementById("reg");
-var w = document.getElementById("other");
 
 function register() {
-  x.style.left = "-400px";
-  y.style.left = "50px";
-  z.style.left = "110px";
-  w.style.visibility = "hidden";
-  b.style.color = "#fff";
-  a.style.color = "#000";
+  x.style.transform = "translateX(-100%)";
+  x.style.opacity = "0";
+  x.style.visibility = "hidden";
+  y.style.transform = "translateX(0)";
+  y.style.opacity = "1";
+  y.style.visibility = "visible";
+  z.style.left = "calc(50% + 5px)";
+  b.classList.add("active");
+  a.classList.remove("active");
 }
 
 function login() {
-  x.style.left = "50px";
-  y.style.left = "450px";
-  z.style.left = "0px";
-  w.style.visibility = "visible";
-  a.style.color = "#fff";
-  b.style.color = "#000";
+  x.style.transform = "translateX(0)";
+  x.style.opacity = "1";
+  x.style.visibility = "visible";
+  y.style.transform = "translateX(100%)";
+  y.style.opacity = "0";
+  y.style.visibility = "hidden";
+  z.style.left = "5px";
+  a.classList.add("active");
+  b.classList.remove("active");
+}
+
+// Password toggle functionality
+function togglePassword(inputId) {
+  const passwordInput = document.getElementById(inputId);
+  const toggleIcon = passwordInput.nextElementSibling;
+  
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleIcon.classList.remove("fa-eye");
+    toggleIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    toggleIcon.classList.remove("fa-eye-slash");
+    toggleIcon.classList.add("fa-eye");
+  }
 }
   
 // CheckBox Function
 function goFurther(){
+  const submitBtn = document.getElementById('btnSubmit');
   if (document.getElementById("chkAgree").checked == true) {
-    document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #FA4B37, #DF2771);';
-  }
-  else{
-    document.getElementById('btnSubmit').style = 'background: lightgray;';
+    submitBtn.classList.add('enabled');
+    submitBtn.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+    submitBtn.style.color = 'white';
+    submitBtn.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.3)';
+  } else {
+    submitBtn.classList.remove('enabled');
+    submitBtn.style.background = '#e9ecef';
+    submitBtn.style.color = '#6c757d';
+    submitBtn.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
   }
 }
 
@@ -186,57 +213,122 @@ function sideMenu(side) {
 
 const toTopBtn = document.getElementById("toTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) { // lowered for testing
-    toTopBtn.style.display = "block";
-  } else {
-    toTopBtn.style.display = "none";
-  }
-});
-
-toTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+if (toTopBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      toTopBtn.style.display = "block";
+    } else {
+      toTopBtn.style.display = "none";
+    }
   });
-});
-  function animateCounters() {
-    const counters = document.querySelectorAll(".data");
 
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      let count = 0;
-      const duration = 2000; // animation duration in ms
-      const startTime = performance.now();
-
-      function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        // Easing: easeOutCubic
-        const progress = Math.min(elapsed / duration, 1);
-        const easedProgress = 1 - Math.pow(1 - progress, 3);
-
-        count = Math.floor(target * easedProgress);
-        counter.innerText = count;
-
-        if (progress < 1) {
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.innerText = target; // Ensure exact target at the end
-        }
-      }
-
-      requestAnimationFrame(updateCounter);
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
-  }
+  });
+}
 
-  // Trigger animation when in viewport
+function animateCounters() {
+  const counters = document.querySelectorAll(".data");
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const duration = 2000;
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      count = Math.floor(target * easedProgress);
+      counter.innerText = count;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target;
+      }
+    }
+
+    requestAnimationFrame(updateCounter);
+  });
+}
+
+// Trigger animation when in viewport
+if (document.querySelector(".extra")) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         animateCounters();
-        observer.disconnect(); // Run only once
+        observer.disconnect();
       }
     });
   });
 
   observer.observe(document.querySelector(".extra"));
+}
+
+// Enhanced login form functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize login form as active
+  if (document.getElementById('login')) {
+    login();
+  }
+  
+  // Add floating label effect
+  const inputFields = document.querySelectorAll('.input-field');
+  inputFields.forEach(field => {
+    field.addEventListener('focus', function() {
+      this.parentElement.classList.add('focused');
+    });
+    
+    field.addEventListener('blur', function() {
+      if (this.value === '') {
+        this.parentElement.classList.remove('focused');
+      }
+    });
+  });
+  
+  // Real-time password strength indicator
+  const passwordField = document.getElementById('reg-password');
+  if (passwordField) {
+    passwordField.addEventListener('input', function() {
+      checkPasswordStrength(this.value);
+    });
+  }
+  
+  // Confirm password validation
+  const confirmPasswordField = document.getElementById('confirm-password');
+  if (confirmPasswordField) {
+    confirmPasswordField.addEventListener('input', function() {
+      validatePasswordMatch();
+    });
+  }
+});
+
+function checkPasswordStrength(password) {
+  const strength = {
+    weak: password.length < 6,
+    medium: password.length >= 6 && password.length < 10,
+    strong: password.length >= 10 && /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/.test(password)
+  };
+  
+  console.log('Password strength:', strength);
+}
+
+function validatePasswordMatch() {
+  const password = document.getElementById('reg-password');
+  const confirmPassword = document.getElementById('confirm-password');
+  
+  if (password && confirmPassword) {
+    if (password.value !== confirmPassword.value && confirmPassword.value.length > 0) {
+      confirmPassword.parentElement.style.borderColor = '#ff4757';
+    } else {
+      confirmPassword.parentElement.style.borderColor = '';
+    }
+  }
+}
