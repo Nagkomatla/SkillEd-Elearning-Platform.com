@@ -1393,3 +1393,32 @@ body.dark-mode footer input::placeholder {
   background-color: #555;
   transform: scale(1.1);
 }
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to right, #FA4B37, #DF2771); /* Original colors */
+  margin-top: 50px;
+  height: 50px; /* Adjust to text size */
+  position: relative;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll 60s linear infinite; /* Slower scroll */
+}
+
+.marquee-container:hover .marquee {
+  animation-play-state: paused; /* Pause on hover */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
