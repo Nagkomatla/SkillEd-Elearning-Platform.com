@@ -823,20 +823,19 @@ body.dark-mode .card-title {
 	text-align: center;
 	width: 350px;
 	height: 200px;
-	box-shadow: inset 0 0 20px rgba(255,255,255,0.05),
-					0 0 50px rgba(0,0,0,0.8);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20); 
 	border-radius: 5px;
 	cursor: pointer;
 	transition-duration: .5s;
 }
 .service-swipe .s-card p {
-	color: #f2f2f2;
-	font-size: 1.2em;
-	font-family: 'Open Sans',sans-serif;
+    color: #2E3D49; /* <<< MUST BE A DARK COLOR HERE */
+    font-size: 1.2em;
+    font-family: 'Open Sans',sans-serif;
 }
 .service-swipe .s-card:hover {
-	box-shadow: 0 0 50px rgba(255,255,255,0.8);
-	transform: translateY(-10px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-5px); 
 }
 body.dark-mode .service-swipe {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
@@ -848,7 +847,7 @@ body.dark-mode .service-swipe {
 body.dark-mode .service-swipe .s-card {
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05),
               0 0 50px rgba(0, 0, 0, 0.9);
-  background: rgba(31, 41, 55, 0.9); /* Dark background overlay */
+  background: rgba(255, 255, 255, 0.9); /* Dark background overlay */
 }
 
 body.dark-mode .service-swipe .s-card p {
@@ -858,7 +857,6 @@ body.dark-mode .service-swipe .s-card p {
 body.dark-mode .service-swipe .s-card:hover {
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
 }
-
 
 /*Contact Us Section*/
 .csec {
@@ -1303,93 +1301,112 @@ body.dark-mode footer input::placeholder {
   color: #9ca3af !important;
 }
 
-
 /*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/
 @media screen and (max-width: 960px) {
-	.footer-container {
-		max-width: 600px;
-	}
-	.right-col {
-		width: 100%;
-		margin-bottom: 60px;
-	}
-	.left-col {
-		width: 100%;
-		text-align: center;
-	}
-	.social-media {
-		display: flex;
-		justify-content: center;
-	}
-	.logo {
-		transition: 1s;
-		margin-left: 30%;
-	}
-	nav ul, .srch, .get-started{
-		display: none;
-	}
-	.menu {
-		display: block;
-	}
-	nav {
-		padding-bottom: 20px;
-		border-bottom: 1px solid #0005;
-		/* position: fixed; */
-		/* top: 0; */
-	}
-	.quote p, .quote h5, .play {
-		justify-content: center;
-		text-align: center;
-	}
-	.quote p {
-		font-size: 30px;
-	}
-	.service-container .right-side img {
-		width: 90%;
-	}
-	.title {
-		margin-top: 0px;
-	}
-	
-}
-@media screen and (max-width: 700px) {
-	footer .btn{
-		margin: 0;
-		width: 100%;
-		margin-top: 20px;
-	}
-	.svg-image img {
-		width: 90%;
-		margin: 20px;
-		/* align-self: center; */
-	}
+
+    /* --- FIXES FOR SERVICES SECTION CONTRAST ON MOBILE START --- */
+    
+    /* NEW FIX: Forces the ENTIRE background of the services section to white on mobile */
+    .service-swipe {
+        background-image: none !important; /* Removes the dark desktop background image */
+        background-color: #FFFFFF !important; /* Forces the section background to pure white */
+    }
+
+    /* 1. Forces the main "Services" title and card text to be dark on mobile */
+    #services_section center p {
+        color: #2E3D49 !important; 
+    }
+    .service-swipe .s-card p {
+        color: #2E3D49 !important; 
+    }
+    
+    /* 2. Forces the service card background to BRIGHT WHITE (Decisive fix) */
+    .service-swipe .s-card {
+        background: #FFFFFF !important; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    }
+
+    /* 3. Ensures dark mode colors remain correct on mobile if dark mode is active */
+    body.dark-mode .service-swipe {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)) !important; 
+        background-color: #1f2937 !important;
+    }
+    body.dark-mode #services_section center p,
+    body.dark-mode .service-swipe .s-card p {
+        color: #e5e7eb !important; 
+    }
+    body.dark-mode .service-swipe .s-card {
+        background: #1f2937 !important; 
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05),
+                    0 0 50px rgba(0, 0, 0, 0.9);
+    }
+    /* --- FIXES FOR SERVICES SECTION CONTRAST ON MOBILE END --- */
+
+
+    .footer-container {
+        max-width: 600px;
+    }
+    .right-col {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .left-col {
+        width: 100%;
+        text-align: center;
+    }
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+    .logo {
+        transition: 1s;
+        margin-left: 30%;
+    }
+    nav ul, .srch, .get-started{
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    nav {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #0005;
+        /* position: fixed; */
+        /* top: 0; */
+    }
+    .quote p, .quote h5, .play {
+        justify-content: center;
+        text-align: center;
+    }
+    .quote p {
+        font-size: 30px;
+    }
+    .service-container .right-side img {
+        width: 90%;
+    }
+    .title {
+        margin-top: 0px;
+    }
+    
 }
 
-@media screen and (max-width: 1000px) {	
-	.feedbox form input, .feedbox form .fname{
-		width: 100%;
-	}
-}
+/* --- RESTORE DESKTOP/DARK BACKGROUND FOR SERVICES SECTION (min-width: 961px) --- */
+/* FORCES THE ENTIRE SECTION BACKGROUND TO WHITE ON DESKTOP */
+@media screen and (min-width: 961px) {
+    .service-swipe {
+        /* Disables the background image/gradient and forces solid white background */
+        background-image: none !important; 
+        background-color: #FFFFFF !important; 
+        background-attachment: scroll !important; /* Prevents fixed background issues */
+    }
 
-/* Navigate to Top Button Styles */
-#toTopBtn {
-  display: none; /* Hidden by default */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    /* Sets the main Services title text to dark (since background is now white) */
+    #services_section center p {
+        color: #2E3D49 !important; 
+    }
 
-#toTopBtn:hover {
-  background-color: #555;
-  transform: scale(1.1);
+    /* Sets the service card text to dark (since card backgrounds are white) */
+    .service-swipe .s-card p {
+        color: #2E3D49 !important; 
+    }
 }
