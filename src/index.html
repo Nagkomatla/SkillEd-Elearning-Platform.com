@@ -85,7 +85,7 @@
 				<li><a href="#team_section">Team </a></li>
 				<li><a href="#services_section">Services</a></li>
 				<li><a href="#contactus_section">Contact</a></li>
-				<li><a href="#feedBACK">Feedback</a></li>
+				<!-- Removed Feedback link as it's merged into Contact -->
 			</ul>
 		</div>
 	</header>
@@ -344,21 +344,34 @@
 	</div>
 </div>
 
-<!-- CONTACT US -->
+<!-- CONTACT US & FEEDBACK (Unified) -->
 	<div class="diffSection fade-in" id="contactus_section">
-		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<center><p style="font-size: 50px; padding: 100px">Contact Us & Feedback</p></center>
 		<div class="csec fade-in"></div>
 		<div class="back-contact fade-in">
 			<div class="cc fade-in">
 			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
-				<label>First Name <span class="imp fade-in">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
-				<center>
-				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
-				</center>
+				<label>Category <span class="imp fade-in">*</span></label><br>
+				<select name="category" required="required">
+					<option value="Contact">Contact</option>
+					<option value="Feedback">Feedback</option>
+				</select><br>
+
+				<div class="name-fields">
+					<div class="form-group">
+						<label>First Name <span class="imp fade-in">*</span></label>
+						<input type="text" name="fname" required="required">
+					</div>
+					<div class="form-group">
+						<label>Last Name <span class="imp fade-in">*</span></label>
+						<input type="text" name="lname" required="required">
+					</div>
+				</div>
+
 				<label>Email <span class="imp fade-in">*</span></label><br>
-				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<input type="email" name="mail" required="required"><br>
 				<label>Message <span class="imp fade-in">*</span></label><br>
-				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<textarea name="message" required="required"></textarea><br>
 				<label>Additional Details</label><br>
 				<textarea name="addtional"></textarea><br>
 				<button type="submit" id="csubmit">Send Message</button>
@@ -367,28 +380,6 @@
 		</div>
 	</div>
 
-
-<!-- FEEDBACK -->
-	<div class="title2 fade-in" id="feedBACK">
-		<span>Give Feedback</span>
-		<div class="shortdesc2 fade-in">
-			<p>Please share your valuable feedback to us</p>
-		</div>
-	</div>
-
-	<div class="feedbox fade-in">
-		<div class="feed fade-in">
-			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
-				<label>Your Name</label><br>
-				<input type="text" name="" class="fname fade-in" required="required"><br>
-				<label>Email</label><br>
-				<input type="email" name="mail" required="required"><br>
-				<label>Additional Details</label><br>
-				<textarea name="addtional"></textarea><br>
-				<button type="submit" id="csubmit">Send Message</button>
-			</form>
-		</div>
-	</div>
 
 <!-- Sliding Information -->
 	<marquee style="background: linear-gradient(to right, #FA4B37, #DF2771); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
