@@ -76,8 +76,31 @@ function login() {
 // Password toggle functionality
 function togglePassword(inputId) {
   const passwordInput = document.getElementById(inputId);
-  const toggleIcon = passwordInput.nextElementSibling;
   
+  // Check if password input exists
+  if (!passwordInput) {
+    console.error(`Password input with id "${inputId}" not found`);
+    return;
+  }
+  
+  // Find the toggle icon using multiple methods
+  let toggleIcon = passwordInput.nextElementSibling;
+  
+  // If nextElementSibling doesn't work, try finding by class in the same container
+  if (!toggleIcon || !toggleIcon.classList.contains('password-toggle')) {
+    const inputWrapper = passwordInput.closest('.input-wrapper');
+    if (inputWrapper) {
+      toggleIcon = inputWrapper.querySelector('.password-toggle');
+    }
+  }
+  
+  // Check if toggle icon exists
+  if (!toggleIcon) {
+    console.error(`Toggle icon not found for input "${inputId}"`);
+    return;
+  }
+  
+  // Toggle password visibility
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     toggleIcon.classList.remove("fa-eye");
